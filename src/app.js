@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path');
 const hbs = require('hbs');
+const port = process.env.PORT || 3000;
 // console.log(__dirname);
 const app = express()
 const pathDirec =  path.join(__dirname,'../public');
@@ -93,6 +94,6 @@ app.get('/weather', function (req, res) {
         address: res.query.address
     })
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Port No . 30000 here .............");
 })
